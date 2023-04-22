@@ -1,0 +1,11 @@
+import React from 'react';
+
+/**
+* {{model}} Component
+*/
+
+const {{model}}  = ({children}) => {
+  return <>{children}</>
+}
+
+export default {{model}}

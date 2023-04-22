@@ -1,0 +1,12 @@
+import React from 'react';
+import { render } from '@testing-library/react';
+import { {{model}} } from "./{{model}}";
+
+describe("{{model}} test", () => {
+  test('renders without crashing', () => {
+    const { container } = render(<{{model}} />);
+    expect(container).toBeInTheDocument();
+  });
+
+});
+

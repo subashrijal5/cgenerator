@@ -1,0 +1,17 @@
+import React from 'react';
+
+type {{model}}Props = {
+  children: React.ReactNode
+  // Add extra types here ...
+}
+
+/**
+* {{model}} Component
+*/
+
+
+const {{model}} : React.FC<{{model}}Props> = ({children}) => {
+  return <>{children}</>
+}
+
+export default {{model}}

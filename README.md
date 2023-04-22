@@ -28,7 +28,10 @@ This simple npm library allows you to create your component along with test and 
   ```
  5. Above command will generate a folder containing component, test and documentation file.  
 *Documentation is under development right now will be live in few days. *
+
+Made with :heart: by [@subashrijal5](https://subashrijal5.github.io)
 ## Contributors
+
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->

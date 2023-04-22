@@ -9,7 +9,7 @@ This simple npm library allows you to create your component along with test and 
 
  1. Install Package 
  ```js
- npm i subash/cgenerator -D
+ npm i @subashrijal5/component-generator
  ```
  
  2. Initialize and setup your requirements, You will be asked few questions, please choose as per your requirement.  

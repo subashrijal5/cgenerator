@@ -2,7 +2,11 @@
   "name": "@subashrijal5/component-generator",
   "version": "1.0.0",
   "description": "This simple npm library allows you to create your component along with test and documentation file from a simple command within your favorite framework. *Note: Currently I have just add support for typescript/react and javascript/react. very soon It will be available for frameworks vue.js, svlte solid.js and many more",
-  "keywords": ["component Creator", "react component", "Command Line Tool"],
+  "keywords": [
+    "component Creator",
+    "react component",
+    "Command Line Tool"
+  ],
   "main": "dist/cgenerator.umd.js",
   "module": "dist/cgenerator.es5.js",
   "typings": "dist/types/cgenerator.d.ts",
@@ -21,7 +25,7 @@
   "scripts": {
     "lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
     "prebuild": "rimraf dist",
-    "build": "tsc --module commonjs && rollup -c rollup.config.ts && typedoc --out docs --target es6 --theme minimal --mode file src",
+    "build": "tsc --module commonjs && npm run copy-files",
     "start": "rollup -c rollup.config.ts -w",
     "test": "jest --coverage",
     "test:watch": "jest --coverage --watch",
@@ -34,7 +38,8 @@
     "precommit": "lint-staged",
     "travis-deploy-once": "travis-deploy-once",
     "make:init": "ts-node src/setup.ts",
-    "make:component": "ts-node src/cgenerator.ts"
+    "make:component": "ts-node src/cgenerator.ts",
+    "copy-files": "copyfiles -u 1 src/templates/*/*.template dist/lib/"
   },
   "lint-staged": {
     "{src,test}/**/*.ts": [
@@ -87,9 +92,11 @@
     "@commitlint/cli": "^7.1.2",
     "@commitlint/config-conventional": "^7.1.2",
     "@types/jest": "^23.3.2",
+    "@types/lodash": "^4.14.112",
     "@types/node": "^10.11.0",
     "colors": "^1.3.2",
     "commitizen": "^3.0.0",
+    "copyfiles": "^2.4.1",
     "coveralls": "^3.0.2",
     "cross-env": "^5.2.0",
     "cz-conventional-changelog": "^2.1.0",
@@ -97,11 +104,11 @@
     "jest": "^23.6.0",
     "jest-config": "^23.6.0",
     "lint-staged": "^8.0.0",
-    "lodash.camelcase": "^4.3.0",
+    "lodash": "^4.17.4",
     "prettier": "^1.14.3",
     "prompt": "^1.0.0",
     "replace-in-file": "^3.4.2",
-    "rimraf": "^2.6.2",
+    "rimraf": "^2.7.1",
     "rollup": "^0.67.0",
     "rollup-plugin-commonjs": "^9.1.8",
     "rollup-plugin-json": "^3.1.0",
@@ -123,5 +130,9 @@
     "@types/prompts": "^2.4.4",
     "dotenv": "^16.0.3",
     "prompts": "^2.4.2"
+  },
+  "bin": {
+    "make-component": "/dist/lib/cgenerator.js",
+    "make-init": "dist/lib/setup.js"
   }
 }

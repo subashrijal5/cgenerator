@@ -1,6 +1,6 @@
 {
   "name": "@subashrijal5/component-generator",
-  "version": "1.0.4",
+  "version": "1.0.3",
   "description": "This simple npm library allows you to create your component along with test and documentation file from a simple command within your favorite framework. *Note: Currently I have just add support for typescript/react and javascript/react. very soon It will be available for frameworks vue.js, svlte solid.js and many more",
   "keywords": [
     "component Creator",

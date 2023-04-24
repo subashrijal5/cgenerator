@@ -14,17 +14,17 @@ This simple npm library allows you to create your component along with test and 
  
  2. Initialize and setup your requirements, You will be asked few questions, please choose as per your requirement.  
  ```js
- npm run make:init
+ npx make-init
  ```
  
  3. On completion of above command **.env** file will be generated on the root directory with the answer you have provided. if you wish to modify the variables you can modify from there. 
  4. Let's generate our first component
  ```js 
- npm run make:component YourComponentName
+ npx make-component YourComponentName
  ``` 
  OR
   ```jsx 
-  npm run make:component --component=YourComponentName
+  npx make-component --component=YourComponentName
   ```
  5. Above command will generate a folder containing component, test and documentation file.  
 *Documentation is under development right now will be live in few days. *
